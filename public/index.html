@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Signup</h2>
+    <form action="/addUser" method="POST">
+        <input type="hidden" name="date" id="currentDate" required><br><br>
+        
+        <label>Necessary</label>
+        <input type="text" name="Necessary" required><br><br>
+
+        <label>Spended Amount</label>
+        <input type="number" name="Spended_Amount" required><br><br>
+
+        <button type="submit">Enter</button>
+    </form>
+</body>
+
+<script>
+  // Auto-fill today's date in yyyy-mm-dd format
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('currentDate').value = today;
+</script>
+</html>
