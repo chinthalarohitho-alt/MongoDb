@@ -3,8 +3,8 @@ const path = require("path");
 const { MongoClient } = require("mongodb");
 
 const app = express();
-const PORT = 5050;
-const MONGO_URL = "mongodb://admin:qwerty@localhost:27017";
+const PORT = process.env.PORT || 5050;
+const MONGO_URL = process.env.MONGO_URL;
 const DB_NAME = "Rohith-db";
 
 app.use(express.urlencoded({ extended: true }));
